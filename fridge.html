@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E04-Parra</title>
+
+    <style>
+        .refrigerator {
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+
+        .fridgebutton {
+            position: absolute;
+            top: 10%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            background-color: darkcyan;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .clock {
+            position: absolute;
+            top: 17%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            background-color: darkcyan;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+
+        }
+
+        .open {
+            display: none;
+            position: absolute;
+            top: 17%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .temp {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            background-color: black;
+            color: darkcyan;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+
+        }
+
+        .fridgebutton2 {
+            display: none;
+            position: absolute;
+            top: 40%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            background-color: black;
+            color: darkcyan;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .netflix {
+            display: none;
+            position: absolute;
+            top: 40%;
+            left: 95%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 25%;
+            height: 20%;
+        }
+
+        .google {
+            display: none;
+            position: absolute;
+            top: 12%;
+            left: 95%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 25%;
+            height: 20%;
+        }
+
+        .opened {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 200%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 150%;
+            height: 100%;
+        }
+
+        h2 {
+            color: darkcyan;
+        }
+    </style>
+</head>
+
+<body onload="doStartClock()">
+    <h1>E04-Parra</h1>
+    <h2>Ilyas's Smart Refrigerator!</h2>
+
+    <p>Featuring On/Off buttons + Clock(Military Time) + Temperature Display + Search Engine(Google) + Netflix + Healthy
+        Meals</p>
+
+    <div class="refrigerator">
+        <img src="https://image-us.samsung.com/SamsungUS/home/home-appliances/refrigerators/rf29bb8200qlaa/RF29BB8200QL_01_Stainless_Steel_SCOM.jpg?$product-details-jpg$"
+            id="image1">
+        <input type="button" onclick="button1()" id="button1" value="On" class="fridgebutton">
+
+        <p id="timePar" class="clock"
+            style="font: size 10em; font-family: 'Courier New', 'Courier New', Courier, monospace; text-align: center;"
+            00:00:00></p>
+
+        <p id="tempDis" class="temp">40&deg;F</p>
+
+        <input type="button" onclick="button2()" id="button2" value="Open Fridge" class="fridgebutton2">
+
+        <img src="https://miro.medium.com/v2/resize:fit:1400/1*CD6IZsYaiuOOF21CgtEmwg.png" id="image2" class="netflix">
+
+        <img src="https://nighteye.app/wp-content/uploads/2019/01/Black-Black-Chrome-Theme-preview-.png" id="image3"
+            class="google">
+
+        <img src="https://www.jennair.com/is/image/content/dam/business-unit/jennair/en_us/clp-sclp-updates/freestanding/Freestanding-Mast-D.jpg?fit=constrain&fmt=png-alpha&wid=2875"
+            id="image4" class="opened">
+
+
+</body>
+
+<script>
+    function doStartClock() {
+        setInterval(doClockTick, 1000);
+    }
+
+    function doClockTick() {
+        var currentDate = new Date();
+        var hours = currentDate.getHours();
+        var mins = currentDate.getMinutes();
+        var secs = currentDate.getSeconds();
+        var timeString = hours + ":" + mins + ":" + secs;
+
+        var outputElement = document.getElementById("timePar");
+        outputElement.textContent = timeString;
+    }
+
+    function button1() {
+        var but1 = document.getElementById("button1");
+        var img2 = document.getElementById("image2");
+        var img3 = document.getElementById("image3");
+        var openButton = document.getElementById("button2")
+        var temp = document.getElementById("tempDis")
+
+        if (but1.value == "Off") {
+            img2.style.display = "none";
+            img3.style.display = "none";
+            openButton.style.display = "none";
+            temp.style.display = "none";
+
+            but1.value = "On";
+        } else {
+            img2.style.display = "block";
+            img3.style.display = "block";
+            openButton.style.display = "block";
+            temp.style.display = "block";
+            but1.value = "Off";
+        }
+    }
+
+
+    function button2() {
+        var image = document.getElementById('image4');
+        var button = document.getElementById('button2');
+
+        if (image.style.display === "block") {
+            image.style.display = "none";
+            button.value = "Open Fridge";
+        } else {
+            image.style.display = "block";
+            button.value = "Close Fridge";
+        }
+    }
+
+
+
+</script>
+
+<footer>
+    <hr>
+    <large>&copy; Ilyas Parra | 03/01/24 </large>
+</footer>
+
+</html>
