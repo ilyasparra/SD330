@@ -1,0 +1,138 @@
+{
+    "lots": {
+        "Donnelly": {
+            "Fac/Staff": "YES",
+            "Available": 20,
+            "Total": 45,
+            "Map": "donnellymap.png",
+            "Security": "24/7",
+            "Type": "Surface Lot",
+            "ParkingSpaces": {
+                "D1": {
+                    "Type": "Faculty/Staff",
+                    "Status": "Available",
+                    "Availability": "Filled",
+                    "FilledDateTime": "04/24 - 8:30 AM",
+                    "ReservedDateTime": "04/23 - 10:00 PM"
+                },
+                "D2": {
+                    "Type": "Student",
+                    "Status": "Reserved",
+                    "Availability": "Filled",
+                    "FilledDateTime": "04/25 - 5:30 PM",
+                    "ReservedDateTime": "04/23 - 10:00 PM"
+                },
+                "D3": {
+                    "Type": "Handicap",
+                    "Status": "Reserved",
+                    "Availability": "Filled",
+                    "FilledDateTime": "04/25 - 5:30 PM",
+                    "ReservedDateTime": "04/23 - 10:00 PM"
+                },
+                "D4": {
+                    "Type": "Faculty/Staff",
+                    "Status": "Available",
+                    "Availability": "Filled",
+                    "FilledDateTime": "04/24 - 1:30 PM",
+                    "ReservedDateTime": "04/24 - 1:00 PM"
+                },
+                "D5": {
+                    "Type": "Student",
+                    "Status": "Available",
+                    "Availability": "Filled",
+                    "FilledDateTime": "04/25 - 5:30 PM",
+                    "ReservedDateTime": "04/23 - 10:00 PM"
+                },
+                "D6": {
+                    "Type": "Student",
+                    "Status": "Available",
+                    "Availability": "Filled",
+                    "FilledDateTime": "04/26 - 9:00 AM",
+                    "ReservedDateTime": "04/25 - 8:00 PM"
+                },
+                "D7": {
+                    "Type": "Faculty/Staff",
+                    "Status": "Reserved",
+                    "Availability": "Filled",
+                    "FilledDateTime": "04/26 - 11:30 AM",
+                    "ReservedDateTime": "04/25 - 10:00 PM"
+                },
+                "D8": {
+                    "Type": "Student",
+                    "Status": "Available",
+                    "Availability": "Filled",
+                    "FilledDateTime": "04/27 - 1:00 PM",
+                    "ReservedDateTime": "04/23 - 10:00 PM"
+                },
+                "D9": {
+                    "Type": "Handicap",
+                    "Status": "Available",
+                    "Availability": "Filled",
+                    "FilledDateTime": "04/27 - 3:30 PM",
+                    "ReservedDateTime": "04/23 - 10:00 PM"
+                },
+                "D10": {
+                    "Type": "Faculty/Staff",
+                    "Status": "Available",
+                    "Availability": "Filled",
+                    "FilledDateTime": "04/28 - 10:00 AM",
+                    "ReservedDateTime": "04/27 - 7:00 PM"
+                },
+                "D11": {
+                    "Type": "Student",
+                    "Status": "Available",
+                    "Availability": "Filled",
+                    "FilledDateTime": "04/28 - 12:30 PM",
+                    "ReservedDateTime": "04/27 - 8:00 PM"
+                },
+                "D12": {
+                    "Type": "Student",
+                    "Status": "Reserved",
+                    "Availability": "Filled",
+                    "FilledDateTime": "04/29 - 2:00 PM",
+                    "ReservedDateTime": "04/27 - 9:00 PM"
+                }
+            }
+        },
+        "SteelPlant": {
+            "Fac/Staff": "NO",
+            "Available": 25,
+            "Total": 48,
+            "Map": "steelplantmap.png",
+            "Security": "Limited",
+            "Type": "Surface Lot"
+        },
+        "Foy": {
+            "Fac/Staff": "YES",
+            "Available": 15,
+            "Total": 40,
+            "Map": "foymap.png",
+            "Security": "Moderate",
+            "Type": "Surface Lot"
+        },
+        "McCann": {
+            "Fac/Staff": "NO",
+            "Available": 18,
+            "Total": 47,
+            "Map": "mccannmap.png",
+            "Security": "24/7",
+            "Type": "Surface Lot"
+        },
+        "LowerWestCedar": {
+            "Fac/Staff": "NO",
+            "Available": 30,
+            "Total": 50,
+            "Map": "lowerwestcedarmap.png",
+            "Security": "Limited",
+            "Type": "Surface Lot"
+        },
+        "UpperWestCedar": {
+            "Fac/Staff": "NO",
+            "Available": 22,
+            "Total": 49,
+            "Map": "upperwestcedarmap.png",
+            "Security": "Limited",
+            "Type": "Surface Lot"
+        }
+    }
+}
