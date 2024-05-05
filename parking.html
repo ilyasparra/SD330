@@ -63,7 +63,7 @@
         }
 
 
-        button {
+        #parkingButton {
             background-color: lightgoldenrodyellow;
             color: black;
             font-weight: bold;
@@ -90,8 +90,6 @@
     <nav class="crumbs">
         <ol>
             <p class="crumb"><a href="parking.html" style="color: lightgoldenrodyellow;">Home</a></p>
-            <p class="crumb"><a href="mylots.html" style="color: lightgoldenrodyellow;">List of Lots</a></p>
-            <p class="crumb"><a href="mylots2.html" style="color: lightgoldenrodyellow;">Spaces for a Selected Lot</a>
             </p>
         </ol>
     </nav>
@@ -108,7 +106,7 @@
         <h2 class="headerDesign">3) Parking at Marist: Parking Spaces</h2>
         <p>After reading both the Enforcement and Registering a Vehicle sections you may proceed!
         </p>
-        <button>Find Parking!</button>
+        <input type="button" onclick="park()" id="parkingButton" value="Find Parking!" class="parkbutton1">
     </div>
 
     <div id="div2" class="mainDivDesign" style="float: left">
@@ -138,5 +136,11 @@
     <br style='clear:right'>
 
 </body>
+
+<script>
+    function park() {
+        window.location.href = "mylots.html";
+    }
+</script>
 
 </html>

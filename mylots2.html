@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Lots Page</title>
+    <link rel="stylesheet" href="marist.css">
+</head>
+
+<style>
+    nav.crumbs {
+        position: relative;
+        z-index: 1001;
+        border-bottom: 1px solid lightgoldenrodyellow;
+    }
+
+    .crumbs ol {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .crumb {
+        display: inline-block;
+    }
+
+    .crumb a::after {
+        display: inline-block;
+        color: #000;
+        content: '>';
+        font-size: 80%;
+        font-weight: bold;
+        padding: 0 3px;
+    }
+
+</style>
+
+<body>
+
+    <h1>List of Parking Spots in Donnelley</h1>
+
+
+    <nav class="crumbs">
+        <ol>
+            <p class="crumb"><a href="parking.html" style="color: lightgoldenrodyellow;">Home</a></p>
+            <p class="crumb"><a href="mylots.html" style="color: lightgoldenrodyellow;">List of Lots</a></p>
+            <p class="crumb"><a href="mylots2.html" style="color: lightgoldenrodyellow;">Spaces for Selected Lot</a>
+            </p>
+        </ol>
+    </nav>
+
+
+    <ul id="ParkingSpaces"></ul>
+
+    <script src="lots2.js"></script>
+
+</body>
+</html>
