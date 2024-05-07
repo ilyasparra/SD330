@@ -34,13 +34,33 @@
         padding: 0 3px;
     }
 
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        color: lightgoldenrodyellow;
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+        border-color: lightgoldenrodyellow;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color:black;
+    }
+
 </style>
 
 <body>
 
     <h1>List of Parking Spots</h1>
 
-    <p>Click on lot to view avaliable spaces. If the lot you clicked sends you to a specific lot, that means that is the only lot currently showing spaces. Thank you.</p>
+    <p>Click the Lot Name in order to see available spaces. If the lot you clicked sends you to a specific lot, that means that is the only lot currently showing spaces.</p>
+
+    <p>Additionally, the spaces are labeled with the first letter of the spot they are associated with. Hence, D1 would be for Donnelley! Thank you.</p>
 
     <nav class="crumbs">
         <ol>
@@ -50,9 +70,20 @@
     </nav>
 
 
-    <ul id="lots">
-
-    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>Lot Name</th>
+                <th>Fac/Staff</th>
+                <th>Available</th>
+                <th>Total</th>
+                <th>Map</th>
+                <th>Security</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody id="lotsBody"></tbody>
+    </table>
 
 
 

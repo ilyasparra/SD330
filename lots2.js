@@ -6,13 +6,28 @@ async function populateDonnellySpaces() {
 
     const donnellySpaces = data.lots.Donnelly.ParkingSpaces;
 
-    const lotList = document.getElementById("ParkingSpaces");
+    const tbody = document.getElementById("ParkingSpaces");
     for (const spaceName in donnellySpaces) {
         const space = donnellySpaces[spaceName];
-        const spaceItem = document.createElement("li");
-        spaceItem.innerText = `${spaceName}: Type - ${space.Type}, Status - ${space.Status}, Availability - ${space.Availability}`;
-        lotList.appendChild(spaceItem);
+        const row = document.createElement("tr");
+
+        const cells = [
+            spaceName,
+            space.Type,
+            space.Status,
+            space.Availability,
+            space.FilledDateTime,
+            space.ReservedDateTime
+        ];
+        cells.forEach(cellData => {
+            const cell = document.createElement("td");
+            cell.textContent = cellData;
+            row.appendChild(cell);
+        });
+
+        tbody.appendChild(row);
     }
 }
 
 populateDonnellySpaces();
+

@@ -68,20 +68,35 @@
             left: 75%;
         }
 
-        .homepage {
+        #homeButton {
             position: absolute;
             bottom: 275px;
             left: 50%;
             transform: translateX(-50%);
-            color: white;
+            background-color: lightgoldenrodyellow;
+            color: black;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
+
+        #homeButton:hover {
+            background-color: #555;
+            color: lightgoldenrodyellow;
+        }
+
+        
     </style>
 </head>
 
 <body>
     <h1>Oops! Caught in the wrong zone? Let's redirect you to the main parking hub!</h1>
 
-    <h2>Please ensure you have proper permissions and try again. If you believe this is an error, please contact the Marist IT Security team for assistance.</h2>
+    <h2>Please ensure you have proper permissions and try again. If you believe this is an error, please contact the Marist IT Security team for assistance at HelpDesk@marist.edu</h2>
 
     <img src="ticket2.jpeg" class="ticket1">
     <img src="ticket1.jpeg" class="ticket2">
@@ -92,8 +107,12 @@
 
 
 
-
-    <a href="parking.html" style="color:lightgoldenrodyellow" class="homepage">Parking Homepage</a>
+    <input type="button" onclick="home()" id="homeButton" value="Return To Home" class="parkbutton2">
 </body>
+<script>
+    function home() {
+        window.location.href = "parking.html";
+    }
+</script>
 
 </html>
